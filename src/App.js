@@ -7,6 +7,8 @@ import { Header } from "./Header";
 import { External } from "./External";
 import { LoginAndOut } from "./LoginAndOut";
 import { Admin } from "./Admin";
+import { MovieInfo } from "./MovieInfo";
+import { MovieInfoAll } from "./MovieInfoAll";
 
 export default App;
 
@@ -25,11 +27,19 @@ function App() {
         />
         <div className="content">
         <Switch>
+        
+     
           <Route exact path="/">
             <Home />
           </Route>
           <Route path="/external">
             <External />
+          </Route>
+          <Route path="/movieInfo">
+            <MovieInfo />
+          </Route>
+          <Route path="/movieInfoAll">
+            <MovieInfoAll />
           </Route>
           <Route path="/admin-page">
             <Admin />
@@ -52,29 +62,11 @@ function App() {
 }
 
 function Home() {
-  return (
+ return (
     <div>
       <h1>Home - Cahit</h1>
-      
-      <h3>Reflections concerning the startcode:</h3>
-      <hr/>
-      <p style={{width:700}}>
-        The overall problem I find using the startcode is related to the fact that it depends upon a lot of small 
-        'tasks' in order to run/function smoothly. And in order to overcome this problem you indeed need to have some 
-        experience setting up the pipeline. Something you can only gain by continiously practicing the set-up procedures 
-        for the startcode. 
-     </p>
-    <p style={{width:700}}>
-      Especially travis has generated some problems and also some concerns for me because of the fact that, often, it 
-      is SOOO easy to forget or not pay attention to the details ... Yes the devil lies in the detail:).
-    </p>
-    <p style={{width:700}}>
-      Personally, I have benefitted significantly from your 'video-recordings' and I would have wished that 
-      the procedures relating to the startcode had been recorded as well. It would, in my opinion, make it much easier for 
-      me (and maybe also my fellow students) to set up the pipeline. Nevertheless, practice makes perfect:).
-    </p>
-
-    </div>
+  <hr/>
+  </div>
   );
 }
 

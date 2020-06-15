@@ -6,9 +6,13 @@ import facade from "./apiFacade";
 export function Header({isLoggedIn, loginMsg}) {
   return (<div>
     <ul className="header">
+      <>
       <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
+      <li><NavLink activeClassName="active" to="/movieInfo">MovieInfo</NavLink></li>
+      </>
       {isLoggedIn &&(
-      <>    
+     <>    
+     <li><NavLink activeClassName="active" to="/movieInfoAll">MovieInfoAll</NavLink></li>
       <li><NavLink activeClassName="active" to="/external">External</NavLink></li>
         {facade.isAdmin() &&(
         <>    
@@ -16,6 +20,7 @@ export function Header({isLoggedIn, loginMsg}) {
         </>
         )}
       </>
+      
       )}
       <li><NavLink activeClassName="active" to="/login-out">{loginMsg}</NavLink></li>
       

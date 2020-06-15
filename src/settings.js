@@ -2,18 +2,30 @@
 function URLS(){
 
     function backendURL() {
-        const URL = "https://cahits.dk/Exam2020";
+        const URL = "http://localhost:8080/startcode";
         return URL;
     }
 
     function externalApi() {
-        const URL = "https://cahits.dk/Exam2020/api/xxx/";
+        const URL = "http://localhost:8080/startcode/api/info/external";
+        return URL;
+    }
+
+    function movieInfoApi(title) {
+        const URL = "http://localhost:8080/startcode/api/movie-info/" + title;
+        return URL;
+    }
+
+    function movieInfoApiAll(title) {
+        const URL = "http://localhost:8080/startcode/api/movie-info-all-ratings/" + title;
         return URL;
     }
 
     return {
         backendURL,
-        externalApi
+        externalApi,
+        movieInfoApi,
+        movieInfoApiAll
     }
 
 }
